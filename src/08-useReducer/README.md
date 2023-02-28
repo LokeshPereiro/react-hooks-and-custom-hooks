@@ -19,3 +19,5 @@ Una alternativa a useState. Acepta un reducer de tipo (state, action) => newStat
 - Para que el estado sea compartido en distintos componentes, existe el useContext()
 
 ## TodoApp Screenshot
+
+![TodoApp Screenshot]("https://github.com/LokeshPereiro/react-hooks-and-custom-hooks/blob/main/src/wireframe/useReducer-TODO-app.png?raw=true")
