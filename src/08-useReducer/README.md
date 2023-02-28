@@ -20,4 +20,4 @@ Una alternativa a useState. Acepta un reducer de tipo (state, action) => newStat
 
 ## TodoApp Screenshot
 
-![TodoApp Screenshot]("../wireframe/useReducer-TODO-app.png")
+![TodoApp Screenshot]("https://github.com/LokeshPereiro/react-hooks-and-custom-hooks/blob/main/src/wireframe/useReducer-TODO-app.png?raw=true")
