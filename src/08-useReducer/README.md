@@ -17,3 +17,7 @@ Una alternativa a useState. Acepta un reducer de tipo (state, action) => newStat
 - Contamos con un reducer global o state global donde acudir para realizar las distintas tareas
 - No obstante, toda nuestra lógica se centra en un único componente... Podríamos usarlo a través de custom hook en otros componentes pero no es lo ideal ya que se duplicaría el reducer ('se intancancia').
 - Para que el estado sea compartido en distintos componentes, existe el useContext()
+
+## TodoApp Screenshot
+
+![TodoApp Screenshot]("../wireframe/useReducer-TODO-app.png")
