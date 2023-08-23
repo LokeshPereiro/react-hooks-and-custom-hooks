@@ -12,14 +12,14 @@ export function CounterApp() {
 
   // Despues
 
-  const [stateCounter, setCounter] = useState({
+  const [stateCounterObj, setCounter] = useState({
     counter1: 10,
     counter2: 20,
     counter3: 30,
   });
 
   // Destructuring del estado inicial
-  const { counter1, counter2, counter3 } = stateCounter;
+  const { counter1, counter2, counter3 } = stateCounterObj;
 
   return (
     <div>
@@ -47,7 +47,7 @@ export function CounterApp() {
         className="btn btn-secondary"
         onClick={() => {
           setCounter({
-            ...stateCounter,
+            ...stateCounterObj,
             counter1: counter1 + 1,
             // counter2: counter2 + 1,
             // counter3: counter3 + 1,

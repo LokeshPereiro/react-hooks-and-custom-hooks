@@ -1,10 +1,12 @@
 # React-Hooks-and-Custom-Hooks
-This app is basically a bunch of basic react hooks and my personal reusable custom hooks. 
+
+This app is basically a bunch of basic react hooks and my personal reusable custom hooks.
 Nevertheless, the useReducer folder has a small TodoApp that might be of your interest, in the rest of the folders I just review the hooks in general...
 
 ## Tech Stack
 
 **FrontEnd:** HTML, CSS, Bootstrap, Reactjs, React-Router-Dom
+
 ## Installation
 
 To run my app with npm
