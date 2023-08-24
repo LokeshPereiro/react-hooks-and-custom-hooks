@@ -1,6 +1,7 @@
-import { CounterWithCustomHook } from "./01-useState/CounterWithCustomHook";
-import { TareaApp } from "./08-useReducer/TareaApp";
-import { ContextApp } from "./09-useContext/ContextApp";
+import { Callback } from "./06-memo/Callback";
+import { MemoHook } from "./06-memo/MemoHook";
+import { Memorize } from "./06-memo/Memorize";
+import { Padre } from "./07-tarea-memo/Padre";
 
 export function HooksApp() {
   return (
@@ -9,9 +10,7 @@ export function HooksApp() {
         HooksApp
       </h1>
       <hr />
-      <CounterWithCustomHook />
-      {/* <TareaApp /> */}
-      {/* <ContextApp /> */}
+      <Padre />
     </div>
   );
 }

@@ -18,7 +18,7 @@ export const Memorize = () => {
         className="btn btn-outline-warning"
         onClick={() => setShow(!show)}
       >
-        Show/Hide {JSON.stringify(show)}
+        Show/Hide <b>{JSON.stringify(show)}</b>
       </button>
     </>
   );

@@ -1,12 +1,16 @@
 import { useRef } from "react";
 
 export const FocusScreen = () => {
+  // const jsClick = () => {
+  //   // document.querySelector("input").focus();
+  //   document.querySelector("input").select();
+  // };
+
   // const ref = useRef();
-  // console.log(ref); --> current
+  // --> current
+  // console.log(ref);
 
   const textRef = useRef();
-
-  /* ¿¿ Por que no puedo selecionar multiples inputs ?? */
 
   const emailRef = useRef();
 
@@ -14,12 +18,13 @@ export const FocusScreen = () => {
     // document.querySelector("input").select();
     textRef.current.select();
     // console.log(textRef);
+    //habiendo dos referencias solo me seleciona el último...
     emailRef.current.select();
   };
 
   return (
     <div>
-      <h2>Focus Screen!</h2>
+      <h2>Focus Screen Input Fields!</h2>
       <input
         ref={textRef}
         type="text"
