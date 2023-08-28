@@ -1,4 +1,4 @@
-import imgError from "../assets/imgs/error.png";
+import imgError from "../../assets/imgs/error.png";
 import { Link } from "react-router-dom";
 export const ErrorPage = () => {
   return (

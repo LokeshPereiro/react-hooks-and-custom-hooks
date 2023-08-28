@@ -1,4 +1,4 @@
-import { TareaApp } from "./08-useReducer/TareaApp";
+import { ContextApp } from "./09-useContext/ContextApp";
 export function HooksApp() {
   return (
     <div>
@@ -6,7 +6,7 @@ export function HooksApp() {
         HooksApp
       </h1>
       <hr />
-      <TareaApp />
+      <ContextApp />
     </div>
   );
 }

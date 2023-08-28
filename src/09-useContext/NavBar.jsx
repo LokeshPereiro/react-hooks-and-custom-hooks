@@ -6,7 +6,7 @@ export const NavBar = () => {
       <nav className="navbar navbar-expand navbar-dark bg-dark rounded-3 ">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            useContext
+            useCxtHome
           </Link>
 
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -15,6 +15,8 @@ export const NavBar = () => {
 
               <NavLink
                 className={({ isActive }) =>
+                  //La propedad booleana "isActive" ya viene dada
+                  // console.log(isActive);
                   `nav-link ${isActive ? "active" : ""}`
                 }
                 to="/about"

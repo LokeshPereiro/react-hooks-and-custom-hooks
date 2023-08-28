@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { HomePage, NavBar, LoginPage, AboutPage, ErrorPage } from ".";
+import { LoginPage, NavBar } from "./";
+import { HomePage, AboutPage, ErrorPage } from "./pages";
 import { UserProvider } from "./context/UserProvider";
 
 export const ContextApp = () => {
@@ -8,7 +9,7 @@ export const ContextApp = () => {
       {/* Navbar va a aparecer en todas las páginas */}
       <NavBar />
       <hr />
-      {/* A partir de aqui vamos a tener páginas individuales */}
+      {/* A partir de aqui vamos a tener páginas individuales de la app*/}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
