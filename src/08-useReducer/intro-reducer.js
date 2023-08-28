@@ -34,7 +34,6 @@ const addTodoAction = {
 };
 
 let todos = todoReducer();
-
 todos = todoReducer(todos, addTodoAction);
 
 // console.log(todos);

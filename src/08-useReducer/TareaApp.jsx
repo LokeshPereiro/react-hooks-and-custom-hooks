@@ -29,6 +29,7 @@ export const TareaApp = () => {
       </div>
 
       {/* ----------------------------------------------------------------------- */}
+
       <div className="row">
         <div className="col-7">
           {/* TodoList */}
@@ -43,7 +44,9 @@ export const TareaApp = () => {
             );
           })}
         </div>
+
         {/* ----------------------------------------------------------------------- */}
+
         <div className="col-5">
           <h4>Añadir Todo</h4>
           <hr />

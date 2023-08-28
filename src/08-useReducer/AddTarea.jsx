@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "../hooks/useForm";
 
 export const AddTarea = ({ onAddNewTarea }) => {
-  const { desc, formState, onInputChange, onResetForm } = useForm({
+  const { desc, onInputChange, onResetForm } = useForm({
     desc: "",
   });
 
@@ -14,8 +14,10 @@ export const AddTarea = ({ onAddNewTarea }) => {
       done: false,
       desc,
     };
+    //Una manera de caidar que nos envien un obj
+    //Es decir, si no hay propiedad la siguiente línea de código no se ejecuta
+    onAddNewTarea && onAddNewTarea(newTarea);
     onResetForm("");
-    onAddNewTarea(newTarea);
   };
 
   return (
@@ -23,7 +25,7 @@ export const AddTarea = ({ onAddNewTarea }) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="What you want to do next?"
+          placeholder="Qué necesitas hacer?"
           className="form-control"
           name="desc"
           value={desc}

@@ -7,28 +7,24 @@ const initialState = [
   //   desc: "Tarea 1",
   //   done: false,
   // },
-  // {
-  //   id: new Date().getTime() * 2,
-  //   desc: "Tarea 2",
-  //   done: false,
-  // },
   //  Vamos guardar los datos en el localStorage
 ];
 
 const init = () => {
-  return JSON.parse(localStorage.getItem("todoApp")) || [];
+  return JSON.parse(localStorage.getItem("todoAppItems")) || [];
 };
 
 export const useTodos = () => {
   //   const [state, dispatch] = useReducer(reducerX, initialState);
-  const [todoState, dispatchTodo] = useReducer(todoReducer, initialState, init);
+  const [todoState, dispatchTodos] = useReducer(
+    todoReducer,
+    initialState,
+    init
+  );
   //   console.log(todoState);
 
   useEffect(() => {
-    // Nuestro estado depende de los todos que recibe por lo que el useEffect es perfecto para traer los datos del localStorage. Es decir, nuestro componente primero se monda con lo los datos que ya tiene y re renderiza de nuevo con los cambios del estado
-    // El setItem necesita dos args, 'un nombre', y los datos que queremos guradar
-    // JSON.stringify es necesario ya que el localStorage solo guarda strings, de no hacerlo nos daría un [object Object]
-    localStorage.setItem("todoApp", JSON.stringify(todoState) || []);
+    localStorage.setItem("todoAppItems", JSON.stringify(todoState) || []);
   }, [todoState]);
 
   const handleNewTodo = (onNewTarea) => {
@@ -37,7 +33,7 @@ export const useTodos = () => {
       type: "[Todo] Add Todo",
       payload: onNewTarea,
     };
-    dispatchTodo(action);
+    dispatchTodos(action);
   };
 
   const handleRemoveTodo = (id) => {
@@ -46,7 +42,7 @@ export const useTodos = () => {
       type: "[Todo] Remove Todo",
       payload: id,
     };
-    dispatchTodo(action);
+    dispatchTodos(action);
   };
 
   const handleToggleTodo = (id) => {
@@ -55,8 +51,9 @@ export const useTodos = () => {
       type: "[Todo] Toggle Todo",
       payload: id,
     };
-    dispatchTodo(action);
+    dispatchTodos(action);
   };
+
   const totalTodos = () => {
     return todoState.length;
   };

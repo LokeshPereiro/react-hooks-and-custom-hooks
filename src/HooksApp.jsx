@@ -1,8 +1,4 @@
-import { Callback } from "./06-memo/Callback";
-import { MemoHook } from "./06-memo/MemoHook";
-import { Memorize } from "./06-memo/Memorize";
-import { Padre } from "./07-tarea-memo/Padre";
-
+import { TareaApp } from "./08-useReducer/TareaApp";
 export function HooksApp() {
   return (
     <div>
@@ -10,7 +6,7 @@ export function HooksApp() {
         HooksApp
       </h1>
       <hr />
-      <Padre />
+      <TareaApp />
     </div>
   );
 }
